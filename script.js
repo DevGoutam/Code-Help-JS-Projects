@@ -47,12 +47,12 @@ function genrateRendomNumber(){
 }
 
 function genrateLowercase(){
-return String.fromCharCode(getRndInteger(97,123));
+return String.fromCharCode(getRndInteger(97,122));
 
 }
  
 function genrateUppercase(){
-return String.fromCharCode(getRndInteger(61,91));
+return String.fromCharCode(getRndInteger(65,90));
 
 }
  
