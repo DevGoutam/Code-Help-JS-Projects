@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "League Spartan", sans-serif;  
+}
+
+:root{
+    --color-blue:RGBA(10,80,142,255);
+    --color-gold:#bd9b6b;
+    --color-black:#1e1e1e;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+    background-size: cover;
+    
+    
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 450px;
+}
+.heading{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.pswrd{
+    position: relative;
+    background-color: var(--color-black);
+    border-radius: 1rem;
+    border-bottom:0.35rem solid rgba(255, 255, 255, 0.753) ;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+.display{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    padding: 1.15rem 1rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+border: hidden;
+}
+
+.display::placeholder{
+    position: absolute;
+    top:50%;
+    left:1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: var(--color-gold);
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%) ;
+}
+.pswrd button{
+    position: absolute;
+    top:50%;
+    right: 1.5rem;
+    transform: translateY(-50%) ;
+
+}
+
+.pswrdcreater-card{
+    width: 100%;
+    background-color: var(--color-black);
+    padding: 2rem;
+    border-radius: 1rem;
+  border-bottom:0.35rem solid rgba(255, 255, 255, 0.753) ;
+}
+
+.pswrdlength{
+    display: flex;
+    justify-content:space-between;
+}
+
+.pswrdlength div:nth-child(1){
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+.pswrdlength div:nth-child(2){
+    color: var(--color-gold);
+    font-size: 1.5rem;
+}
+
+.strenght{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strenght div:nth-child(1){
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.light{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #fff;
+}
+
+.gen-pswrd{
+    width:100%;
+    border-radius:0.75rem;
+    border: none;
+     border-bottom:0.35rem solid rgba(255, 255, 255, 0.856) ;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: white;
+ background-image: linear-gradient( 135deg, #492f70 40%, #BC78EC 120%);
+ /* background-color: #6B4498; */
+ font-weight: 600;
+ padding: 1rem 0;
+ cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.checkbox input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid  rgb(0, 217, 255) ;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+ .checkbox input:checked{
+    background-color: rgb(0, 217, 255);
+    
+ }
+
+ .checkbox input:checked::before{
+    content:"🗸";
+    position:absolute;
+    color: var(--color-black);
+    font-size: 1.25rem;
+    font-weight: 600;
+    left: 50%;
+    top:-3.5px;
+    transform:translateY(-0.8px) translateX(-7.7px);
+    
+    
+ }
+
+ .checkbox label{
+    font-size: 1.25rem;
+    color:white;
+    letter-spacing: 0.75px;
+
+ }
+
+ .slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor:pointer;
+border-radius: 1rem;
+margin-top: 2rem;
+margin-bottom: 1.5rem;
+  background-image: linear-gradient( 135deg,  #BC78EC -10%,#3B2667 100%);
+  background-repeat: no-repeat;
+  background-color: var(--color-black);
+ }
+ 
+ .slider::-webkit-slider-thumb{
+    appearance: none;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-image: linear-gradient( 135deg, rgb(11, 192, 224) 35%,rgb(255, 255, 255) 120%);
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 0px #e7e7e7 ; 
+    transition: all 100ms ease-in;
+    border: none;
+ }
+/* 
+ .slider:focus{
+    outline: 2px solid rgb(255, 255, 255);
+ } */
+
+
+  
+ .slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--color-gold) ;
+    background-image: none;
+    background-color: var(--color-black);
+    box-shadow: 0px 0px 50px 0px var(--color-gold) ; 
+ }
+
+ .slider::-moz-range-thumb {
+    appearance: none;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-image: linear-gradient( 135deg, rgb(11, 192, 224) 35%,rgb(255, 255, 255) 120%);
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 0px #e7e7e7 ; 
+    transition: all 100ms ease-in;
+    border: none;
+  }
+  
+  .slider::-moz-range-thumb:hover {
+     outline: 2px solid var(--color-gold) ;
+    background-image: none;
+    background-color: var(--color-black);
+    box-shadow: 0px 0px 50px 0px var(--color-gold) ; 
+  }
+
+ .copy-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* color: rgb(0, 217, 255); */
+
+ }
+.tooltip {
+    position: absolute;
+    background-color:rgba(0, 217, 255, 0.445) ;
+    
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+  }
